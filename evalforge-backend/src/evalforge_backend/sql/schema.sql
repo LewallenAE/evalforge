@@ -1,4 +1,4 @@
-CREATE TABLE evaluations (
+CREATE TABLE IF NOT EXISTS evaluations (
     evaluation_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     task_id TEXT NOT NULL CHECK (task_id != ''),
     passed BOOLEAN NOT NULL,
